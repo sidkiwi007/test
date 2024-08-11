@@ -13,13 +13,13 @@ const BlogModel = require("./model");
 app.post("/addEmployee", async (req, res) => {
   const { EmpName, designation, empId, img_url } = req.body;
 
-  // Validate required fields
+  
   if (!EmpName || !designation || !empId || !img_url) {
     return res.status(400).send("All fields are required.");
   }
 
   try {
-    // Save the employee data
+    
     const result = await BlogModel(req.body).save();
     res.status(201).send({ message: "Employee added", employee: result });
   } catch (error) {
@@ -29,7 +29,7 @@ app.post("/addEmployee", async (req, res) => {
 });
 
 app.post("/addEmployee", async (req, res) => {
-  console.log("Request Body:", req.body);  // Log incoming data
+  console.log("Request Body:", req.body);  
 
   try {
     const result = await BlogModel(req.body).save();

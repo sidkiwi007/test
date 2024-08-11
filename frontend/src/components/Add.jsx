@@ -18,7 +18,7 @@ const Add = () => {
 
   const addData = () => {
     axios
-      .post("http://localhost:3001/addEmployee", inputs)  // Update endpoint to match backend
+      .post("http://localhost:3001/addEmployee", inputs)  
       .then((res) => {
         console.log("Data added successfully:", res);
         navigate("/"); 
@@ -62,8 +62,8 @@ const Add = () => {
             onChange={inputHandler}
             name="designation"
             value={inputs.designation}
-            multiline={true}  // Set to boolean
-            rows={4}          // Set number of rows for multiline
+            multiline={true} 
+            rows={4}         
           />
           <TextField
             variant="outlined"
